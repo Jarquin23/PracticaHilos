@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ni.edu.uam.practicahilos.MonitorController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="580"
+      prefHeight="480">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Monitor de procesos"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="6" alignment="CENTER_LEFT">
+        <Label text="Clientes — 100 registros (sleep 80 ms)"
+               style="-fx-font-weight: bold;"/>
+        <ProgressBar fx:id="barraClientes" progress="0" prefWidth="510"/>
+        <Label fx:id="lblEstadoClientes" text="Esperando inicio"/>
+        <Label fx:id="lblTiempoClientes" text="Tiempo: 0 ms"/>
+        <HBox spacing="10">
+            <Button fx:id="btnIniciarClientes" text="Iniciar clientes"
+                    onAction="#iniciarClientes"/>
+            <Button fx:id="btnDetenerClientes" text="Detener clientes"
+                    onAction="#detenerClientes" disable="true"/>
+            <Button fx:id="btnReiniciarClientes" text="Reiniciar clientes"
+                    onAction="#reiniciarClientes" disable="true"/>
+        </HBox>
+    </VBox>
+
+    <Separator/>
+
+    <VBox spacing="6" alignment="CENTER_LEFT">
+        <Label text="Productos — 50 registros (sleep 150 ms)"
+               style="-fx-font-weight: bold;"/>
+        <ProgressBar fx:id="barraProductos" progress="0" prefWidth="510"/>
+        <Label fx:id="lblEstadoProductos" text="Esperando inicio"/>
+        <Label fx:id="lblTiempoProductos" text="Tiempo: 0 ms"/>
+        <HBox spacing="10">
+            <Button fx:id="btnIniciarProductos" text="Iniciar productos"
+                    onAction="#iniciarProductos"/>
+            <Button fx:id="btnDetenerProductos" text="Detener productos"
+                    onAction="#detenerProductos" disable="true"/>
+            <Button fx:id="btnReiniciarProductos" text="Reiniciar productos"
+                    onAction="#reiniciarProductos" disable="true"/>
+        </HBox>
+    </VBox>
+</VBox>

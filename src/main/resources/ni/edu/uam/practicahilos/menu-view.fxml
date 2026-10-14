@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ni.edu.uam.practicahilos.MenuController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="420"
+      prefHeight="280">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Hilos en JavaFX"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Label text="Selecciona el módulo a ejecutar:"
+           style="-fx-font-size: 14px;"/>
+
+    <Button text="Procesador de registros"
+            onAction="#abrirPractica"
+            prefWidth="320"
+            prefHeight="40"/>
+
+    <Button text="Monitor concurrente"
+            onAction="#abrirReto"
+            prefWidth="320"
+            prefHeight="40"/>
+
+    <Button text="Salir"
+            onAction="#salir"
+            prefWidth="320"/>
+</VBox>
